@@ -19,7 +19,8 @@
 
       th:action="@{/process}"
       th:object="${bullhorn}"
-      method="post">
+      method="post"
+      enctype="multipart/form-data">
 
 
     <div class="form-group">
@@ -56,6 +57,16 @@
 
         <span th:if="${#fields.hasErrors('postedby')}"
               th:errors="*{postedby}"></span><br/>
+    </div>
+
+    <div class="form-group">
+
+        <label for="file">Choose an image</label>
+        <input type="file" th:field="*{headshot}" class="form-control" id="file" name="file">
+
+        <span th:if="${#fields.hasErrors('headshot')}"
+              th:errors="*{headshot}"></span><br/>
+
     </div>
 
 

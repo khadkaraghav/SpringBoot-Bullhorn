@@ -17,7 +17,6 @@
 <div class="jumbotron jumbotron-fluid">
     <h3 align="center"><a href="/add">Add New Bullhorn</a></h3>
 </div>
-
     <div class="table-responsive">
 <table class="table">
 <thead>
@@ -32,6 +31,10 @@
 </thead>
 
     <tr th:each="bullhorn : ${bullhorns}">
+
+        <td><div th:if="${bullhorn.headshot} != null">
+            <img th:src="${bullhorn.headshot}" alt="file" class="img-responsive img-fluid rounded-circle"/>
+        </div></td>
         <td th:text="${bullhorn.id}"></td>
         <td th:text="${bullhorn.title}"></td>
         <td th:text="${bullhorn.content}"></td>

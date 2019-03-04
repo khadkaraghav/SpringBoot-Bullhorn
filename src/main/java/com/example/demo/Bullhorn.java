@@ -29,6 +29,9 @@ public class Bullhorn {
     @Size(min = 2, max = 50)
     private String postedby;
 
+    private String headshot;
+
+
     public Bullhorn() {
     }
 
@@ -70,5 +73,13 @@ public class Bullhorn {
 
     public void setPostedby(String postedby) {
         this.postedby = postedby;
+    }
+
+    public String getHeadshot() {
+        return headshot;
+    }
+
+    public void setHeadshot(String headshot) {
+        this.headshot = headshot;
     }
 }
